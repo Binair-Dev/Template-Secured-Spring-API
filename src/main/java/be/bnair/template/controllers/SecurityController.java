@@ -25,7 +25,7 @@ public class SecurityController {
     }
 
     @PostMapping(path = {"/login", "/signIn"})
-    public ResponseEntity<AuthResponse> signInAction(
+    public ResponseEntity<AuthResponse> loginAction(
             HttpServletRequest request,
             @RequestBody LoginForm form
     ) {
@@ -40,7 +40,7 @@ public class SecurityController {
     }
 
     @GetMapping(path = {"/register", "signUp"})
-    public ResponseEntity<AuthResponse> getregisterAction(
+    public ResponseEntity<AuthResponse> getRegisterAction(
             @RequestBody LoginForm form
     ) {
         UserEntity entity = new UserEntity();
